@@ -1,0 +1,48 @@
+.cv-preview6-wp.left-cv-layout .rgt{
+    padding-left: 0;
+}
+.cv-preview6-wp.cvpreview5-wp .lft-btm-wp{
+margin-top: 0;
+background-color: rgb(218, 172, 209);
+position: relative;
+padding-top: 60px;
+}
+.cv-preview6-wp.cvpreview5-wp .lft-btm-wp:after{
+    content: '';
+    height: 40px;
+    width: 100%;
+    background-color: rgb(82, 82, 82);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+.cv-preview6-wp.cvpreview5-wp.left-cv-layout .lft-section-wp .lft-hd{
+    color: black;
+    text-align: left;
+    background-color: transparent;
+    padding: 0;
+    border-bottom: 1px solid black;
+   
+}
+.cv-preview6-wp.cvpreview5-wp.left-cv-layout .details .section__title{
+    color: black;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    letter-spacing: 0;
+    text-align: left;
+    padding: 5px 0px;
+}
+.cv-preview6-wp.cvpreview5-wp.left-cv-layout .img-wp, .cv-preview6-wp.cvpreview5-wp.left-cv-layout .rgt-name-wp{
+min-height: 150px;
+background-color: rgb(82, 82, 82);
+}
+.cv-preview6-wp .details{
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.cv-preview6-wp{
+    padding: 0;
+}

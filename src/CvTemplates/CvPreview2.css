@@ -1,0 +1,106 @@
+.left-cv-layout{
+    display: flex;
+    padding: 30px;
+    background-color: white;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.left-cv-layout .lft{
+    width: 300px;
+    background-color: #00ab9f;
+    padding: 20px;color: white;
+}
+.left-cv-layout .rgt{
+    width: calc(100% - 300px);
+}
+.left-cv-layout .img-wp{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    width: fit-content;
+    text-align: center;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-cv-layout .img-wp img{
+    max-width: 50%;
+    width: 100px;
+    height: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+.left-cv-layout .full-name{
+    font-weight: 700;
+}
+.lft-section-wp{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.lft-section-wp:last-child{
+    margin-bottom: 0;
+}
+.left-cv-layout  .lft-section-wp .lft-hd{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0px 5px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid white;
+    margin-bottom: 15px;
+    
+}
+.lft-section-wp  .lft-sc-blk{
+margin-bottom: 10px;
+}
+.contact-blk{
+    display: flex;align-items: center;
+}
+.contact-blk .cnt-lft{
+    padding-right: 10px;font-weight: 600;
+    width: 80px;
+}
+.left-cv-layout .section-cnt{
+    margin-bottom: 10px;
+}
+.left-cv-layout .rgt{
+    padding-left: 20px;
+}
+.left-cv-layout .rgt-name-wp{
+    text-align: right;
+    margin-bottom: 20px;
+}
+.left-cv-layout .rgt-name-wp h2{
+    color: #9d9b9b;
+    font-weight: 600;
+    margin-top: 0;
+    font-size: 35px;
+}
+.left-cv-layout .details .section__title{
+    font-size: 20px;
+  font-weight: 600;
+  padding: 0px 5px;
+    padding-bottom: 0px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #00ab9f;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  color: #00ab9f;
+}
+.left-cv-layout .section__list{
+    margin-bottom: 10px;
+}
+.left-cv-layout .section__list:last-child{
+    margin-bottom: 0;
+}
+.left-cv-layout .details .left{
+    width: 50%;
+}
+.left-cv-layout .details .right{
+    width: 50%;
+}

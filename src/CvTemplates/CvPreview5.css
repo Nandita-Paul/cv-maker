@@ -1,0 +1,42 @@
+.cvpreview5-wp.left-cv-layout .img-wp{
+    padding: 30px;
+    width: 100%;
+    background-color: rgb(28, 28, 30);
+    border-radius: 0;
+}
+.cvpreview5-wp.left-cv-layout .rgt-name-wp{
+    padding: 30px;
+    width: 100%;
+    background-color: rgb(28, 28, 30);
+    border-radius: 0;
+    text-align: center;
+}
+.cvpreview5-wp.left-cv-layout .rgt-name-wp *{
+    color: white;
+}
+.cvpreview5-wp.left-cv-layout .lft{
+    padding: 0;
+}
+.cvpreview5-wp.left-cv-layout .img-wp *{
+    color: white;
+}
+.cvpreview5-wp.left-cv-layout .lft{
+    background-color: unset;
+}
+.cvpreview5-wp .lft-btm-wp{
+    padding: 20px;
+    background-color: rgb(5, 142, 142);
+    margin-top: 20px;
+}
+.cvpreview5-wp .lft-btm-wp *{
+    color: black;
+}
+.cvpreview5-wp.left-cv-layout .lft-section-wp .lft-hd,
+.cvpreview5-wp.left-cv-layout .details .section__title{
+    padding: 5px 20px;
+    text-align: center;
+    background-color: rgb(28, 28, 30);
+    border: none;
+    color: white;
+    font-weight: 400;
+}

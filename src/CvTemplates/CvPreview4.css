@@ -1,0 +1,30 @@
+.cv-preview-top .inner-wrp{
+    width: 100%;
+}
+.cv-preview-top .details{
+    padding: 20px 30px 30px 30px;
+}
+.cv-preview-top .top-wrp{
+    padding: 30px;
+    background-color: rgb(12, 1, 38);
+    text-align: center;
+}
+.left-grey-layout .details .section__title{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(12, 1, 38);
+    color: rgb(12, 1, 38);
+}
+.cv-preview-top .top-wrp *{
+    color: white;
+}
+.cv-preview-top .contact-wrp{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cv-preview-top .contact-blk{
+    margin: 10px;
+}
+.lft-section-wp .lft-hd{
+    margin-bottom: 0;
+}

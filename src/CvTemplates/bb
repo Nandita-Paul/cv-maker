@@ -1,0 +1,208 @@
+// components/CVPreview.js
+import React from 'react';
+import { connect } from 'react-redux';
+
+const CVPreview = ({ personalInfo, education, template }) => {
+  return (
+    <div>
+      <h2>CV Preview</h2>
+      // {template}
+      <div>
+        <h3>Personal Information</h3>
+        <p>Name: {personalInfo.name}</p>
+        <p>Email: {personalInfo.email}</p>
+        <p>Phone: {personalInfo.phone}</p>
+        <p>Address: {personalInfo.address}</p>
+        <p>Photo: {personalInfo.photo}</p>
+        <p>Alternate Phone: {personalInfo.alternatephone}</p>
+        <p>Designation: {personalInfo.designation}</p>
+        <p>Profile: {personalInfo.profile}</p>
+      </div>
+      <div>
+        <h3>Education</h3>
+        {education.map((edu, index) => (
+          <div key={index}>
+            <p>Institution: {edu.institution}</p>
+            <p>Degree: {edu.degree}</p>
+            <p>Field of Study: {edu.fieldOfStudy}</p>
+            <p>Start Date: {edu.startDate}</p>
+            <p>End Date: {edu.endDate}</p>
+          </div>
+        ))}
+      </div>
+      {/* Add other sections for Experience, Skills, etc. */}
+    </div>
+  );
+};
+
+const mapStateToProps = (state) => ({
+  personalInfo: state.personalInfo,
+  education: state.education,
+  template: state.template,
+  // Add other mapStateToProps as needed
+});
+
+export default connect(mapStateToProps)(CVPreview);
+
+
+
+
+
+
+
+
+
+import React, { useRef } from 'react';
+import { connect } from 'react-redux';
+import './CvPreview1.css';
+import html2pdf from 'html2pdf.js';
+
+const CvPreview1 = ({ personalInfo, education, template, skills, hobbies, labels }) => {
+    const contentRef = useRef(null);
+
+    const downloadPDF = () => {
+        const element = contentRef.current;
+        html2pdf()
+            .from(element)
+            .save('document.pdf');
+    };
+
+
+    return (
+        <div >
+            <div id="content" ref={contentRef}>
+                <div className="container1">
+                    <div className="header">
+
+                        {personalInfo.name && (
+                            <div className="full-name">
+                                <span className="first-name">{personalInfo.name}</span>
+                            </div>
+                        )}
+                        {personalInfo.email && personalInfo.phone && (
+
+                            <div className="contact-info">
+                                <span className="email">Email: </span>
+                                <span className="email-val">{personalInfo.email}</span>
+                                <span className="separator"></span>
+                                <span className="phone">Phone: </span>
+                                <span className="phone-val">{personalInfo.phone}</span>
+                            </div>
+                        )}
+                        {personalInfo.email && personalInfo.phone && (
+
+                            <div className="contact-info">
+                                <span className="email">Alternate Phone Number: </span>
+                                <span className="email-val">{personalInfo.alternatephone}</span>
+                                <span className="separator"></span>
+                                <span className="phone">Address: </span>
+                                <span className="phone-val">{personalInfo.address}</span>
+                            </div>
+                        )}
+                        {personalInfo.profile && personalInfo.designation && (
+                            <div className="about">
+                                <span className="position">{personalInfo.designation} </span>
+                                <span className="desc">
+                                    {personalInfo.profile}
+                                </span>
+                            </div>
+                        )}
+                    </div>
+                    <div className="details">
+                        {education && education.length > 0 && (
+                            <div className="section">
+                                <div className="section__title">Education</div>
+                                {education.map((edu, index) => (
+                                    <div className="section__list">
+                                        <div className="section__list-item">
+                                            <div className="left">
+                                                <div className="name">{edu.institution}</div>
+                                                <div className="addr">{edu.degree}</div>
+                                                <div className="duration">{edu.fieldOfStudy}</div>
+                                            </div>
+                                            <div className="right">
+                                                <div className="name">{edu.startDate} - {edu.endDate} </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                ))}
+
+                            </div>
+                        )}
+                        {skills && skills.length > 0 && (
+                            <div className="section">
+                                <div className="section__title">Skills</div>
+                                {skills.map((sku, index) => (
+                                    <div className="section__list">
+                                        <div className="section__list-item">
+                                            {sku.skill}
+                                        </div>
+
+
+                                    </div>
+                                ))}
+
+                            </div>
+                        )}
+                        {hobbies && hobbies.length > 0 && (
+                            <div className="section">
+                                <div className="section__title">Hobbies</div>
+                                {hobbies.map((hbs, index) => (
+                                    <div className="section__list">
+                                        <div className="section__list-item">
+                                            {hbs.hobbies}
+                                        </div>
+
+
+                                    </div>
+                                ))}
+
+                            </div>
+                        )}
+
+                        {labels && labels.length > 0 && (
+                            <>
+                                {labels.map((edu, index) => (
+                                    <div className="section">
+                                        <div className="section__title"> {edu[0]?.labels}</div>
+                                        {edu.map((nestedLabel, nestedIndex) => (
+                                            <>
+                                                {nestedLabel.nestedLabels && (
+                                                    <div className="section__list">
+                                                        <div className="section__list-item">
+
+                                                            <div dangerouslySetInnerHTML={{ __html: nestedLabel.nestedLabels }}></div>
+                                                        </div>
+
+
+                                                    </div>
+                                                )}
+                                            </>
+                                        ))}
+
+                                    </div>
+                                ))}
+                            </>
+                        )}
+
+
+                    </div>
+                </div>
+            </div>
+            <button onClick={downloadPDF}>Download PDF</button>
+        </div>
+    )
+}
+const mapStateToProps = (state) => ({
+    personalInfo: state.personalInfo,
+    education: state.education,
+    template: state.template,
+    skills: state.skills,
+    hobbies: state.hobbies,
+    labels: state.labels
+    // Add other mapStateToProps as needed
+});
+export default connect(mapStateToProps)(CvPreview1)

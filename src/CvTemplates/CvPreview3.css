@@ -1,0 +1,114 @@
+.left-grey-layout{
+    display: flex;
+    background-color: white;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.left-grey-layout .lft{
+    width: 300px;
+    background-color: #f5f5f5;
+    padding: 20px;color: black;
+}
+.left-grey-layout .rgt{
+    width: calc(100% - 300px);
+}
+.left-grey-layout .img-wp{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    width: fit-content;
+    text-align: center;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-grey-layout .img-wp img{
+    max-width: 50%;
+    width: 100px;
+    height: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+.left-grey-layout .full-name{
+    font-weight: 700;
+}
+.lft-section-wp{
+    margin-bottom: 35px;
+}
+.lft-section-wp:last-child{
+    margin-bottom: 0;
+}
+.lft-section-wp .lft-hd{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0px 5px;
+    padding-bottom: 7px;
+    margin-bottom: 15px;
+    
+}
+.lft-section-wp  .lft-sc-blk{
+margin-bottom: 10px;
+}
+.contact-blk{
+    display: flex;align-items: center;
+}
+.contact-blk .cnt-lft{
+    padding-right: 10px;font-weight: 600;
+    width: 80px;
+}
+.left-grey-layout .section-cnt{
+    margin-bottom: 10px;
+}
+.left-grey-layout .rgt{
+   padding: 30px;
+}
+.left-grey-layout .rgt-name-wp{
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+	padding-bottom: 20px;
+
+}
+.left-grey-layout .rgt-name-wp h2{
+    color: grey;
+    font-weight: 600;
+    margin-top: 0;
+    font-size: 35px;
+}
+.left-grey-layout{
+	font-size: 15px;
+}
+.left-grey-layout .details .section__title{
+    font-size: 22px;
+  font-weight: 600;
+  padding: 0px 5px;
+    padding-bottom: 0px;
+  padding-bottom: 7px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  color: black;
+}
+.left-grey-layout .section__list{
+    margin-bottom: 10px;
+}
+.left-grey-layout .section__list:last-child{
+    margin-bottom: 0;
+}
+.left-grey-layout .details .left{
+    width: 50%;
+}
+.left-grey-layout .details .right{
+    width: 50%;
+}
+.left-grey-layout .section-cnt{
+	padding: 10px;
+	width: fit-content;
+	border-radius: 5px;
+	border: 1px solid black;
+	background-color: white;
+    width: 100%;
+}
